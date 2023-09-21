@@ -49,8 +49,8 @@
     </div> --}}
 
     <div id="app">
-
-        <message-component :objet={{ $objet_id }} :sender={{ $sender_id }}  :user={{ session('personneId') }} ></message-component>
+        <message-component :objet={{ $objet_id }} :titre="'{{ $titre }}'" :sender={{ $sender_id }}
+            :user={{ session('personneId') }}></message-component>
     </div>
 
 @endsection

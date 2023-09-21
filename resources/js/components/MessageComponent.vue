@@ -3,7 +3,9 @@
     <div class="row justify-content-center">
       <div class="col-12">
         <div class="card">
-          <div class="card-header">Conversation for the item : </div>
+          <div class="card-header">Conversation for the item : <em>
+              <samll> {{ titre }} </samll>
+            </em></div>
           <div class="card-body height3">
             <ul class="chat-list">
               <li v-for="message in messages"
@@ -46,7 +48,8 @@ export default {
   props: {
     user: Number,
     objet: Number,
-    sender: Number
+    sender: Number,
+    titre: String
   },
 
   mounted() {
@@ -57,6 +60,7 @@ export default {
       console.log(this.messages);
     })
 
+
   }
 
   ,
@@ -64,7 +68,7 @@ export default {
   data() {
     return {
       newMessage: '',
-      messages: []
+      messages: [],
     }
   }
 
